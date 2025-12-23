@@ -16,5 +16,9 @@ services:
       - "${PORT}:${PORT}"
     env_file:
       - .env
+    volumes:
+      - .:/app    # 로컬 현재 디렉토리를 컨테이너 /app에 마운트
+      - /app/node_modules  # node_modules는 컨테이너 안에서 유지
+    command: npm run dev
     depends_on:
       - mysql
