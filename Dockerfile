@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # 소스 복사
-# COPY . .
+COPY . .
 
 # 포트 노출
 EXPOSE 3000
